@@ -1,7 +1,9 @@
-Factory.define :product do |p|
-  p.name { Faker::Company.name }
-  p.description "test product"
-  p.price 1_000
-  p.image { File.new(Rails.root.join("spec", "support", "files", "chromium_logos.jpg")) }
-  p.publish_at Date.today - 1.month
+FactoryGirl.define do
+  factory :product do
+    name { Faker::Company.name }
+    description "test product"
+    price 1_000
+    image { File.new(Rails.root.join("spec", "support", "files", "chromium_logos.jpg")) }
+    publish_at Date.today - 1.month
+  end
 end

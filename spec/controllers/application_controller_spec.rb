@@ -2,9 +2,9 @@ require "spec_helper"
 
 describe ApplicationController do
 
-  let(:user) { Factory.create(:user) }
-  let!(:showroom) { Factory.create(:showroom, :user => user) }
-  let(:admin_user) { Factory.create(:admin_user) }
+  let(:user) { FactoryGirl.create(:user) }
+  let!(:showroom) { FactoryGirl.create(:showroom, :user => user) }
+  let(:admin_user) { FactoryGirl.create(:admin_user) }
 
   before do
     sign_in user

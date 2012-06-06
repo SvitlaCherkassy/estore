@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe ProductsController do
 
-  let(:user) { Factory.create(:user) }
-  let(:product) { Factory.create(:product) }
-  let!(:showroom) { Factory.create(:showroom, :user => user, :products => [product]) }
+  let(:user) { FactoryGirl.create(:user) }
+  let(:product) { FactoryGirl.create(:product) }
+  let!(:showroom) { FactoryGirl.create(:showroom, :user => user, :products => [product]) }
   let(:current_showroom) { user.current_showroom }
 
   before do
@@ -31,7 +31,7 @@ describe ProductsController do
     end
 
     it "should showr product info even if product doesn't belong to user's showroom" do
-      public_product = Factory.create(:product)
+      public_product = FactoryGirl.create(:product)
       get :show, :id => public_product
       response.should be_success
       assigns(:product).should eq(public_product)

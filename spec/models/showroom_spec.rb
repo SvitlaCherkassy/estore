@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Showroom do
-  let(:showroom) { Factory.build(:showroom) }
+  let(:showroom) { FactoryGirl.build(:showroom) }
 
   context "validation" do
     it "should be valid" do
