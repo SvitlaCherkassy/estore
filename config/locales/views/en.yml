@@ -71,3 +71,14 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  shared:
+    user_navigation:
+      signed_in_as: "Signed in as"
+      not_you: ". Not you?"
+      sign_out: "Sign out"
+      sign_up: "Sign up"
+      or: "or"
+      sign_in: "Sign in"
+  products:
+    show:
+      showroom: "Showroom"
