@@ -82,3 +82,6 @@ en:
   products:
     show:
       showroom: "Showroom"
+  layouts:
+    application:
+      estore: 'Estore'
