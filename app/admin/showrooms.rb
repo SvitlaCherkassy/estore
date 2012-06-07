@@ -4,7 +4,7 @@ ActiveAdmin.register Showroom do
       f.input :title
       f.input :products
     end
-    f.buttons
+    f.actions
   end
 
   index do
