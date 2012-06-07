@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe 'AdminPages' do
 
-  let(:admin_user) { Factory.create(:admin_user, :password => 'password') }
-  let(:user) { Factory.create(:user) }
-  let(:product) { Factory.create(:product) }
-  let!(:showroom) { Factory.create(:showroom, :user => user, :products => [product]) }
+  let(:admin_user) { FactoryGirl.create(:admin_user, :password => 'password') }
+  let(:user) { FactoryGirl.create(:user) }
+  let(:product) { FactoryGirl.create(:product) }
+  let!(:showroom) { FactoryGirl.create(:showroom, :user => user, :products => [product]) }
 
   before do
     post 'admin/login', :admin_user => { :email => admin_user.email, :password => 'password' }

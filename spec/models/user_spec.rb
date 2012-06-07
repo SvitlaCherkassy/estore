@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
 
-  let(:user) { Factory.build(:user) }
+  let(:user) { FactoryGirl.build(:user) }
 
   context "validation" do
     it "should be valid" do
@@ -25,7 +25,7 @@ describe User do
     end
 
     context "password" do
-      let(:user) { Factory.build(:user, :password => nil, :password_confirmation => nil) }
+      let(:user) { FactoryGirl.build(:user, :password => nil, :password_confirmation => nil) }
       
       it "should require password and password confirmation" do
         user.should_not be_valid
@@ -49,8 +49,8 @@ describe User do
 
   context "#current_showroom" do
     it "should use lates showroom" do
-      Factory.create(:showroom, :user => user)
-      latest_showroom = Factory.create(:showroom, :user => user)
+      FactoryGirl.create(:showroom, :user => user)
+      latest_showroom = FactoryGirl.create(:showroom, :user => user)
       user.current_showroom.should eq(latest_showroom)
     end
   end
