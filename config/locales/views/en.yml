@@ -2,86 +2,109 @@ en:
   devise:
     confirmations:
       new:
+        resend_confirmation_instructions: Resend confirmation instructions
+      send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
+      send_paranoid_instructions: If your e-mail exists on our database, you will receive an email with instructions about how to confirm your account in a few minutes.
+      confirmed: Your account was successfully confirmed. You are now signed in.
     mailer:
       confirmation_instructions:
+        welcome_email: "Welcome %{email}!"
+        confirm_account_link: "You can confirm your account through the link below:"
+        confirm_account: Confirm my account
       reset_password_instructions:
+        hello_email: "Hello %{email}!"
+        change_password_link_text: Someone has requested a link to change your password, and you can do this through the link below.
+        change_my_password: Change my password
+        ignore_email_text: If you didn't request this, please ignore this email.
+        password_changing_explanation: Your password won't change until you access the link above and create a new one.
       unlock_instructions:
+        hello_email: "Hello %{email}!"
+        account_lock_explanation: Your account has been locked due to an excessive amount of unsuccessful sign in attempts.
+        unlock_link: "Click the link below to unlock your account:"
+        unlock_my_account: Unlock my account
+      confirmation_instructions:
+        subject: Confirmation instructions
+      reset_password_instructions:
+        subject: Reset password instructions
+      unlock_instructions:
+        subject: Unlock Instructions
     passwords:
       edit:
+        change_your_password: Change your password
+        new_password: New password
+        confirm_new_password: Confirm new password
+        change_my_password: Change my password
       new:
+        forgot_your_password: Forgot your password?
+        send_reset_instructions: Send me reset password instructions
+      send_instructions: You will receive an email with instructions about how to reset your password in a few minutes.
+      updated: Your password was changed successfully. You are now signed in.
+      updated_not_active: Your password was changed successfully.
+      send_paranoid_instructions: If your e-mail exists on our database, you will receive a password recovery link on your e-mail
     registrations:
       edit:
+        edit_name: "Edit %{name}"
+        password_hint: (leave blank if you don't want to change it)
+        current_password_hint: (we need your current password to confirm your changes)
+        update: Update
+        unhappy_link: "Unhappy? %{link}."
+        back: Back
       new:
+        sign_up: Sign up
+      signed_up: Welcome! You have signed up successfully.
+      inactive_signed_up: 'You have signed up successfully. However, we could not sign you in because your account is %{reason}.'
+      updated: You updated your account successfully.
+      destroyed: Bye! Your account was successfully cancelled. We hope to see you again soon.
+      reasons:
+        inactive: inactive
+        unconfirmed: unconfirmed
+        locked: locked
     sessions:
       new:
         sign_in: Sign In
-      signed_in: 'Signed in successfully.'
-      signed_out: 'Signed out successfully.'
+      signed_in: Signed in successfully.
+      signed_out: Signed out successfully.
     unlocks:
       new:
+        resend_unlock_instructions: Resend unlock instructions
+      send_instructions: You will receive an email with instructions about how to unlock your account in a few minutes.
+      unlocked: Your account was successfully unlocked. You are now signed in.
+      send_paranoid_instructions: If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.
 
     failure:
-      already_authenticated: 'You are already signed in.'
-      unauthenticated: 'You need to sign in or sign up before continuing.'
-      unconfirmed: 'You have to confirm your account before continuing.'
-      locked: 'Your account is locked.'
-      invalid: 'Invalid email or password.'
-      invalid_token: 'Invalid authentication token.'
-      timeout: 'Your session expired, please sign in again to continue.'
-      inactive: 'Your account was not activated yet.'
-    passwords:
-      send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
-      updated: 'Your password was changed successfully. You are now signed in.'
-      updated_not_active: 'Your password was changed successfully.'
-      send_paranoid_instructions: "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
-    confirmations:
-      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
-      send_paranoid_instructions: 'If your e-mail exists on our database, you will receive an email with instructions about how to confirm your account in a few minutes.'
-      confirmed: 'Your account was successfully confirmed. You are now signed in.'
-    registrations:
-      signed_up: 'Welcome! You have signed up successfully.'
-      inactive_signed_up: 'You have signed up successfully. However, we could not sign you in because your account is %{reason}.'
-      updated: 'You updated your account successfully.'
-      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
-      reasons:
-        inactive: 'inactive'
-        unconfirmed: 'unconfirmed'
-        locked: 'locked'
-    unlocks:
-      send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
-      unlocked: 'Your account was successfully unlocked. You are now signed in.'
-      send_paranoid_instructions: 'If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.'
+      already_authenticated: You are already signed in.
+      unauthenticated: You need to sign in or sign up before continuing.
+      unconfirmed: You have to confirm your account before continuing.
+      locked: Your account is locked.
+      invalid: Invalid email or password.
+      invalid_token: Invalid authentication token.
+      timeout: Your session expired, please sign in again to continue.
+      inactive: Your account was not activated yet.
     omniauth_callbacks:
-      success: 'Successfully authorized from %{kind} account.'
+      success: "Successfully authorized from %{kind} account."
       failure: 'Could not authorize you from %{kind} because "%{reason}".'
-    mailer:
-      confirmation_instructions:
-        subject: 'Confirmation instructions'
-      reset_password_instructions:
-        subject: 'Reset password instructions'
-      unlock_instructions:
-        subject: 'Unlock Instructions'
 
   errors:
     messages:
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      already_confirmed: "was already confirmed, please try signing in"
-      not_locked: "was not locked"
+      expired: has expired, please request a new one
+      not_found: not found
+      already_confirmed: was already confirmed, please try signing in
+      not_locked: was not locked
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+
   shared:
     user_navigation:
-      signed_in_as: "Signed in as"
+      signed_in_as: Signed in as
       not_you: ". Not you?"
-      sign_out: "Sign out"
-      sign_up: "Sign up"
-      or: "or"
-      sign_in: "Sign in"
+      sign_out: Sign out
+      sign_up: Sign up
+      or: or
+      sign_in: Sign in
   products:
     show:
-      showroom: "Showroom"
+      showroom: Showroom
   layouts:
     application:
-      estore: 'Estore'
+      estore: Estore
