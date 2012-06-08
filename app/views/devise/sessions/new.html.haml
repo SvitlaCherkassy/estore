@@ -1,4 +1,8 @@
 %h2= t(".sign_in")
+= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter)
+= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
+= link_to "Sign in with Google-OpenId", user_omniauth_authorize_path(:google)
+= link_to "Sign in with Linkedin", user_omniauth_authorize_path(:linkedin)
 = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
   %div
     = f.label :email

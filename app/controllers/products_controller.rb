@@ -3,8 +3,7 @@ class ProductsController < ApplicationController
   before_filter :find_product, :only => :show
 
   def index
-    # we keep the history of user's showrooms but user sees only current mont's showroom
-    @products = current_showroom.products.page(params[:page] || 1)
+    @products = Product.page(params[:page] || 1)
   end
 
   private

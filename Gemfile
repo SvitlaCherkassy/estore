@@ -10,6 +10,15 @@ gem 'meta_search'
 gem 'activeadmin'
 gem 'kaminari'
 gem 'haml'
+gem 'ffaker'
+gem 'factory_girl_rails', '>= 1.0'
+gem 'rspec-rails', '>= 2.6.0'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-google'
+gem 'omniauth-openid'
+gem 'omniauth-linkedin'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,8 +31,10 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
-  gem 'rspec-rails'
-  gem 'ffaker'
-  gem 'factory_girl_rails'
   gem 'simplecov'
+end
+
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
+  gem 'pg'
 end
