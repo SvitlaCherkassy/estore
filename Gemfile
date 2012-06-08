@@ -10,6 +10,8 @@ gem 'meta_search', '>= 1.1.0.pre'
 gem 'activeadmin'
 gem 'kaminari'
 gem 'haml'
+gem 'ffaker'
+gem 'factory_girl_rails', '>= 1.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,7 +25,5 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails', '>= 2.6.0'
-  gem 'ffaker'
-  gem 'factory_girl_rails', '>= 1.0'
   gem 'simplecov'
 end
