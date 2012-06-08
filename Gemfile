@@ -32,6 +32,7 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'simplecov'
+  gem 'jasmine'
 end
 
 group :production do

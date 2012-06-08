@@ -16,7 +16,8 @@
   %div
     = f.label :password
     %br
-    = f.password_field :password
+    %span.error_mes_pass
+    = f.password_field :password, onblur: 'password_val($(this).val());'
   %div
     = f.label :password_confirmation
     %br
