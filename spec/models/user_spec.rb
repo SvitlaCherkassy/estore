@@ -9,14 +9,10 @@ describe User do
       user.should be_valid
     end
 
-    it "should require first name" do
+    it "should not require first and last name" do
       user.first_name = nil
-      user.should_not be_valid
-    end
-
-    it "should require last name" do
       user.last_name = nil
-      user.should_not be_valid
+      user.should be_valid
     end
 
     it "should require email" do
