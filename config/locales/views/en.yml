@@ -46,6 +46,7 @@ en:
         edit_name: "Edit %{name}"
         password_hint: (leave blank if you don't want to change it)
         current_password_hint: (we need your current password to confirm your changes)
+        sure: Are you sure?
         update: Update
         unhappy_link: "Unhappy? %{link}."
         back: Back

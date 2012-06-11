@@ -193,15 +193,16 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+  APP_CONFIG = YAML.load_file("#{Rails.root}/config/config.yml")[Rails.env]
   require "omniauth-twitter"
-  config.omniauth :twitter, "dNjLxFQorkmf1rZ0vcLzA", "TrIMPpw8pYa4tdMpQjLvjcCoa0f6dVZCZPtbi6paKY"
+  config.omniauth :twitter, APP_CONFIG['twitter_key'], APP_CONFIG['twitter_secret']
   require "omniauth-facebook"
-  config.omniauth :facebook, "372908592773174", "597fb354f1599acffe768e58aee083ed",
+  config.omniauth :facebook, APP_CONFIG['facebook_key'], APP_CONFIG['facebook_secret'],
       {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
   require "omniauth-openid"
   config.omniauth :openid, :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
   require "omniauth-linkedin"
-  config.omniauth :linkedin, "ffuzrr7m2aiq", "ncbQqW6pzCCPMrIj"
+  config.omniauth :linkedin, APP_CONFIG['linkedin_key'], APP_CONFIG['linkedin_secret']
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

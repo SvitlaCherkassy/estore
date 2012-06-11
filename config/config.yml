@@ -1,0 +1,23 @@
+development:
+  twitter_key: dNjLxFQorkmf1rZ0vcLzA
+  twitter_secret: TrIMPpw8pYa4tdMpQjLvjcCoa0f6dVZCZPtbi6paKY
+  facebook_key: 372908592773174
+  facebook_secret: 597fb354f1599acffe768e58aee083ed
+  linkedin_key: ffuzrr7m2aiq
+  linkedin_secret: ncbQqW6pzCCPMrIj
+
+test:
+  twitter_key: dNjLxFQorkmf1rZ0vcLzA
+  twitter_secret: TrIMPpw8pYa4tdMpQjLvjcCoa0f6dVZCZPtbi6paKY
+  facebook_key: 372908592773174
+  facebook_secret: 597fb354f1599acffe768e58aee083ed
+  linkedin_key: ffuzrr7m2aiq
+  linkedin_secret: ncbQqW6pzCCPMrIj
+
+production:
+  twitter_key: 47MfK7NR7vFoSVBwlkMA
+  twitter_secret: UvcUrSuDUomk2TxcYveeX2j2hOF5yTPErIvUD2dqsA
+  facebook_key: 461006623928640
+  facebook_secret: 8fc11593c8b911b1f6fb6b3b4409da1c
+  linkedin_key: ulz01m7daj7n
+  linkedin_secret: ardpyjikSHqPsOUM

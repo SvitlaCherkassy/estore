@@ -1,5 +1,5 @@
-%h2= t(".edit_name", :name => resource_name.to_s.humanize)
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+%h2= t(".edit_name", name: resource_name.to_s.humanize)
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   = devise_error_messages!
   %div
     = f.label :email
@@ -29,5 +29,5 @@
     = f.password_field :current_password
   %div= f.submit t(".update")
 %h3 Cancel my account
-%p= t(".unhappy_link", :link => link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete)
+%p= t(".unhappy_link", link: link_to( "Cancel my account", registration_path(resource_name)), confirm: t(".sure"), method: :delete)
 = link_to t(".back"), :back
