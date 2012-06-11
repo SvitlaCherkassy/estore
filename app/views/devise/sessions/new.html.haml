@@ -1,19 +1,13 @@
 %h2= t(".sign_in")
-= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter)
-= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
-= link_to "Sign in with Google-OpenId", user_omniauth_authorize_path(:google)
-= link_to "Sign in with Linkedin", user_omniauth_authorize_path(:linkedin)
 = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-  %div
+  %div.form_input
     = f.label :email
-    %br
     = f.email_field :email
-  %div
+  %div.form_input
     = f.label :password
-    %br
     = f.password_field :password
   - if devise_mapping.rememberable?
-    %div
+    %div.form_input
       = f.check_box :remember_me
       = f.label :remember_me
   %div= f.submit t(".sign_in")
