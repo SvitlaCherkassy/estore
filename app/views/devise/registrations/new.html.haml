@@ -3,7 +3,8 @@
   = devise_error_messages!
   %div.form_input
     = f.label :email
-    = f.email_field :email
+    %span.error_mes_email
+    = f.email_field :email, onblur: 'IsValidEmail($(this).val());'
   %div.form_input
     = f.label :first_name
     = f.text_field :first_name
