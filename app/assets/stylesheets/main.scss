@@ -21,7 +21,6 @@
     width: 300px;
   }
   .description { width: 300px; }
-  .pagination span.page.current{ float:right; }
 }
 
 .error_mes_pass {
@@ -30,3 +29,5 @@
   text-align: justify;
   width: 190px;
 }
+
+.pagination a { float: none !important; }
