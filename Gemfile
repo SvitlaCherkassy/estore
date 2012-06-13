@@ -31,6 +31,8 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
   gem 'simplecov'
   gem 'jasmine'
 end
