@@ -8,7 +8,7 @@ ActiveAdmin.register Product do
       f.input :showrooms
       f.input :publish_at
     end
-    f.actions
+    f.buttons
   end
 
   index do
