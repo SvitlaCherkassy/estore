@@ -1,7 +1,11 @@
 = paginate @products
 
 %br
-= render @products
+%table.product
+  = render @products
 
 %br
 = paginate @products
+
+%script
+  sortable();

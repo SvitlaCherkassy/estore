@@ -1,12 +1,9 @@
-.product
-
-  %div
+%tr{id: "product_#{product.id}"}
+  %td.handle.width_style
     = image_tag product.image.url(:thumb), class: "width_style"
-
-  .name
+  %td.handle.name
     = link_to product.name, showroom_product_path(product)
-
-  .price
+  %td.handle.price
     = number_to_currency product.price
 
 .both_style

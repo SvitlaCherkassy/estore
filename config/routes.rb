@@ -6,7 +6,11 @@ Estore::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   resource :showroom do
-    resources :products, :only => [ :index, :show ]
+    resources :products, :only => [ :index, :show ] do
+      collection do
+        post 'sort'
+      end
+    end
   end
 
   devise_scope :user do

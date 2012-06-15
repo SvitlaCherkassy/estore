@@ -1,7 +1,13 @@
 .width_style {
-  width: 50px
+  float: left;
+  width: 50px;
 }
 
 .both_style {
   clear: both
+}
+
+.sort_element {
+  float: left;
+  width: 100%;
 }

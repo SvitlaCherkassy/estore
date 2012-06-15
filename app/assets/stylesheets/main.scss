@@ -13,12 +13,14 @@
     padding-left: 10px;
     &:first-child { border-left: none; }
   }
+  list-style-type: none;
   float: left;
-  .name { padding: 10px 10px; width: 300px; }
+  .name { padding: 10px 10px; width: 300px; float: left; }
   .price {
     border-left: 1px solid black;
     padding: 10px 10px;
     width: 300px;
+    float: left;
   }
   .description { width: 300px; }
 }

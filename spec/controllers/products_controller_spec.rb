@@ -4,6 +4,8 @@ describe ProductsController do
 
   let(:user) { FactoryGirl.create(:user) }
   let(:product) { FactoryGirl.create(:product) }
+  let(:product1) { FactoryGirl.create(:product) }
+  let(:product2) { FactoryGirl.create(:product) }
   let!(:showroom) { FactoryGirl.create(:showroom, :user => user, :products => [product]) }
   let(:current_showroom) { user.current_showroom }
 
@@ -21,6 +23,25 @@ describe ProductsController do
       sign_out user
       get :index, :showroom_id => showroom
       assigns(:products).should be_nil
+    end
+  end
+
+  context "#sort" do
+    it "should find products" do
+      xhr :post, :sort, :product => [product.id, product1.id, product2.id]
+      assigns(:product).should_not be_nil
+    end
+
+    it "should not find products" do
+      xhr :post, :sort, :product => []
+      assigns(:product).should be_nil
+    end
+
+    it "should save position for product" do
+      xhr :post, :sort, :product => [product.id, product1.id, product2.id]
+      assigns(:product).position = 2
+      assigns(:product).save
+      assigns[:product].save.should == true
     end
   end
 
